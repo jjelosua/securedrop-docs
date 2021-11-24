@@ -226,7 +226,12 @@ latex_elements = {
     # seem to make this magically work, so define individual characters.
     'preamble': r'''
     \usepackage{amssymb}
+    \DeclareUnicodeCharacter{25B6}{$\blacktriangleright$}
     \DeclareUnicodeCharacter{25B8}{$\blacktriangleright$}
+    \DeclareUnicodeCharacter{2B06}{$\uparrow$}
+    \DeclareUnicodeCharacter{2B07}{$\downarrow$}
+    \DeclareUnicodeCharacter{201C}{\textquotedblleft}
+    \DeclareUnicodeCharacter{201D}{\textquotedblright}
     ''',
     # Latex figure (float) alignment
     # 'figure_align': 'htbp',
