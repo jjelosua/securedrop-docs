@@ -131,13 +131,13 @@ it will give you some parsed output:
 
 ::
 
-    $ echo "Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory" | sudo /var/ossec/bin/ossec-logtest
+    $ echo "Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory “/sys/firmware/efi/esrt/entries”: No such file or directory" | sudo /var/ossec/bin/ossec-logtest
     [...]
     **Phase 1: Completed pre-decoding.
-        full event: 'Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory'
+        full event: 'Mar  1 13:22:53 app fwupd[133921]: 13:22:53:0883 FuPluginUefi         Error opening directory “/sys/firmware/efi/esrt/entries”: No such file or directory'
         hostname: 'app'
         program_name: 'fwupd'
-        log: '13:22:53:0883 FuPluginUefi         Error opening directory â€œ/sys/firmware/efi/esrt/entriesâ€�: No such file or directory'
+        log: '13:22:53:0883 FuPluginUefi         Error opening directory “/sys/firmware/efi/esrt/entries”: No such file or directory'
 
     **Phase 2: Completed decoding.
         No decoder matched.
