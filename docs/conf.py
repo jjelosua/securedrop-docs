@@ -220,7 +220,14 @@ latex_elements = {
     # The font size ('10pt', '11pt' or '12pt').
     # 'pointsize': '10pt',
     # Additional stuff for the LaTeX preamble.
-    # 'preamble': '',
+    # Neither of:
+    #     \usepackage[T1]{fontenc}
+    #     \usepackage{textcomp}
+    # seem to make this magically work, so define individual characters.
+    'preamble': r'''
+    \usepackage{amssymb}
+    \DeclareUnicodeCharacter{25B8}{$\blacktriangleright$}
+    ''',
     # Latex figure (float) alignment
     # 'figure_align': 'htbp',
 }
