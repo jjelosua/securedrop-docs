@@ -7,7 +7,7 @@ RUN pip install -r requirements/requirements.txt
 
 # TODO: run this twice, for stable and latest
 RUN make html
-RUN make latexpdf
+RUN yes '' | make latexpdf || true
 
 # sha256 as of 2021-11-09
 FROM nginx:mainline-alpine@sha256:af466e4f12e3abe41fcfb59ca0573a3a5c640573b389d5287207a49d1324abd8

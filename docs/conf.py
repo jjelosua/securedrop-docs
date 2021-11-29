@@ -224,6 +224,10 @@ latex_elements = {
     #     \usepackage[T1]{fontenc}
     #     \usepackage{textcomp}
     # seem to make this magically work, so define individual characters.
+    # Also,
+    #     \usepackage{svg}
+    # does not seem to allow inclusion of the Weblate status badge (over HTTPS,
+    # which may be the problem).
     'preamble': r'''
     \usepackage{amssymb}
     \DeclareUnicodeCharacter{25B6}{$\blacktriangleright$}
