@@ -13,8 +13,8 @@ RUN yes '' | make latexpdf || true
 FROM nginx:mainline-alpine@sha256:af466e4f12e3abe41fcfb59ca0573a3a5c640573b389d5287207a49d1324abd8
 
 COPY deploy/nginx.conf /etc/nginx
-RUN mkdir -p /opt/nginx/run /opt/nginx/webroot && chown -R nginx:nginx /opt/nginx
+RUN mkdir -p /opt/nginx/run /opt/nginx/webroot/en/latest/pdf && chown -R nginx:nginx /opt/nginx
 
 USER nginx
-COPY --from=sphinx docs/_build/html/html/ /opt/nginx/webroot/
-COPY --from=sphinx docs/_build/html/latex/SecureDrop.pdf /opt/nginx/webroot/
+COPY --from=sphinx docs/_build/html/html/ /opt/nginx/webroot/en/latest/
+COPY --from=sphinx docs/_build/html/latex/SecureDrop.pdf /opt/nginx/webroot/en/latest/pdf/
