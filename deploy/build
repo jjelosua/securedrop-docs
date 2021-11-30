@@ -6,8 +6,11 @@
 set -e
 
 
-latest_branch=main
-stable_tag=$(git tag --sort=version:refname | tail -1)
+#latest_branch=main
+#stable_tag=$(git tag --sort=version:refname | tail -1)
+# TEMPORARY: override those for now
+latest_branch=staging-ci-test
+stable_tag=staging-ci-test
 
 do_build() {
     git checkout "$1"
